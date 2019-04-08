@@ -55,5 +55,3 @@ while True:
 		sleep(5.0)
 	else:
 		print("Waiting for Connection...")
-
-ser.close()
