@@ -19,7 +19,7 @@ mqttc = mqtt.Client()
 mqttc.on_connect = on_connect
 mqttc.on_message = on_message
 
-# Define the AWS Host Key  ; Thing Name defined in AWS IoT; Root Certificate Path; Certificate Path; Private Key Certificate Path  
+# Define the AWS Host Key, AWS PORT, Client Id, Thing Name, Root Certificate Path, Certificate Path, Private Key Certificate Path  
 awshost = ".amazonaws.com"
 # AWS Port(Default: 8883)
 awsport = 8883
