@@ -8,16 +8,12 @@ connection_flag = False
 
 # Check if the Connection to AWS Cloud has been Made.
 def on_connect(client, userdata, flags, rc):
-    global connection_flag
-    connection_flag = True
-    print("Connection returned result: " + str(rc) )
-
-def on_message(client, userdata, msg):
-    print(msg.topic+" "+str(msg.payload))
+	global connection_flag
+	connection_flag = True
+	print("Connection returned result: " + str(rc) )
 
 mqttc = mqtt.Client()
 mqttc.on_connect = on_connect
-mqttc.on_message = on_message
 
 # Define the AWS Host Key, AWS PORT, Client Id, Thing Name, Root Certificate Path, Certificate Path, Private Key Certificate Path  
 awshost = ".amazonaws.com"
